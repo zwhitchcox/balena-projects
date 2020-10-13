@@ -17,6 +17,9 @@ export default async (req, res) => {
       player.pause()
       res.end('pausing')
       break
+    case "restart":
+      player.openFile(resolve(process.cwd(), 'test.wav'))
+      break
 
     default:
       res.status(404).end('Command not found')

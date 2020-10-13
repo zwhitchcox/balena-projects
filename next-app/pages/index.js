@@ -6,13 +6,16 @@ export default function Home() {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Create App</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
-        <button onClick={sendCmd('play')}>Play</button>
-        <button onClick={sendCmd('pause')}>Pause</button>
+        <div className={styles.ctrls}>
+          <button className={styles.btn} onClick={sendCmd('play')}>Play Audio File</button>
+          <button className={styles.btn} onClick={sendCmd('pause')}>Pause</button>
+          <button className={styles.btn} onClick={sendCmd('restart')}>Restart</button>
+        </div>
       </main>
     </div>
   )
